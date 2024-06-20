@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL:'https://localhost:7237',
+    baseURL:'https://hangmo-game-ad894dbd8da1.herokuapp.com',
     headers:{
         'Content-Type': 'application/json'
     },
