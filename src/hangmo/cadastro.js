@@ -10,6 +10,7 @@ import "./hangmo";
 import logo from "../img/Logo.png";
 import googlelogo from "../img/google.png";
 import facebooklogo from "../img/facebook.webp";
+import { Link } from "react-router-dom";
 
 
 function Cadastro() {
@@ -112,9 +113,9 @@ function Cadastro() {
   }, []);
   return (
     <div className="App">
-      <a href="../hangmo">
+      <Link to="../hangmo">
         <img class="logo" src={logo} alt="Logo hangmo" />{" "}
-      </a>
+      </Link>
 
       <div className="container" id="containerCadastro">
         <h1>Cadastro</h1>

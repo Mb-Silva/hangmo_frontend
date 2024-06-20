@@ -8,6 +8,7 @@ import facebooklogo from "../img/facebook.webp";
 import axios from "axios";
 import apiClient from "../api/apiClient";
 import { login } from "../api/gameService";
+import { Link } from "react-router-dom";
 
 
 function Login() {
@@ -35,9 +36,9 @@ function Login() {
 
   return (
     <div className="App">
-      <a href="./login">
+      <Link to="./login">
         <img className="logo" src={logo} alt="Logo hangmo" />{" "}
-      </a>
+      </Link>
 
       <div className="container">
         <form id="loginpage" onSubmit={handleLogin}>
@@ -66,22 +67,20 @@ function Login() {
           </button>
         </form>
         <div id="forgetPassAndCreate">
-          <a href="./esqueci">Esqueci minha senha</a>
-          <a href="./cadastro">Cadastrar</a>
+          <Link to="./esqueci">Esqueci minha senha</Link>
+          <Link to="./cadastro">Cadastrar</Link>
         </div>
         <br />
         <div id="socialLogoImg">
-          <a
-            href="./hangmo/hangmo"
+          <Link to="./hangmo/hangmo"
             onClick={(e) => {
               e.preventDefault();
               alert("Logar com o Google ainda está em desenvolvimento");
             }}
           >
             <img className="sociallogo" src={googlelogo} alt="Logo Google" />{" "}
-          </a>
-          <a
-            href="./hangmo/login"
+          </Link>
+          <Link to="./hangmo/login"
             onClick={(e) => {
               e.preventDefault();
               alert("Logar com o Facebook ainda está em desenvolvimento");
@@ -92,7 +91,7 @@ function Login() {
               src={facebooklogo}
               alt="Logo Facebook"
             />
-          </a>
+          </Link>
         </div>
         <br />
       </div>

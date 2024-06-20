@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import "./hangmo";
 import logo from "../img/Logo.png";
+import { Link } from "react-router-dom";
 
 function Esqueci() {
   React.useEffect(() => {
@@ -24,9 +25,9 @@ function Esqueci() {
 
   return (
     <div className="App">
-      <a href="../hangmo">
+      <Link to="../hangmo">
         <img class="logo" src={logo} alt="Logo hangmo" />{" "}
-      </a>
+      </Link>
 
       <div className="container">
         <h2 style={{ color: "#ff6b00" }}>Recuperação de senha</h2>

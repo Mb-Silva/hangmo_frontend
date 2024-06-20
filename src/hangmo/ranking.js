@@ -1,6 +1,7 @@
 import React from 'react';
 import "./App.css";
 import logo from "../img/Logo.png";
+import { Link } from "react-router-dom";
 
 function Ranking() {
   React.useEffect(() => {
@@ -12,9 +13,9 @@ function Ranking() {
 
   return (
     <div className="App">
-      <a href="./hangmogame">
+      <Link to="./hangmogame">
         <img className="logo" src={logo} alt="Logo hangmo" />{" "}
-      </a>
+      </Link>
 
       <div className="container">
         <div id="rankingPage" style={{ maxHeight: '50vh', overflowY: 'auto' }}>

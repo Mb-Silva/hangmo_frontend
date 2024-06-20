@@ -1,8 +1,9 @@
 import React, { /*useState,*/ useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../img/Logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 const { faker } = require("@faker-js/faker/locale/pt_BR");
+
 
 function Conta() {
   const navigate = useNavigate();
@@ -26,9 +27,9 @@ function Conta() {
 
   return (
     <div className="App">
-      <a href="./hangmogame">
+      <Link to="./hangmogame">
         <img className="logo" src={logo} alt="Logo hangmo" />
-      </a>
+      </Link>
 
       <div className="container">
         <div className="row">
@@ -59,7 +60,7 @@ function Conta() {
             <input className="infom" type="date" />
             <label>Cor favorita: </label>
             <input className="infom" type="color" />
-            <a href="/mudar-senha">Mudar senha</a>
+            <Link to="/mudar-senha">Mudar senha</Link>
             <div>
               <button type="submit" style={{ marginRight: "20px" }}>
                 Salvar
