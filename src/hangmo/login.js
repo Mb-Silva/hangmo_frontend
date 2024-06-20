@@ -68,7 +68,7 @@ function Login() {
         </form>
         <div id="forgetPassAndCreate">
           <Link to="./esqueci">Esqueci minha senha</Link>
-          <Link to="./cadastro">Cadastrar</Link>
+          <Link to="/Cadastro">Cadastrar</Link>
         </div>
         <br />
         <div id="socialLogoImg">
