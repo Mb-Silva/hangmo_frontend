@@ -1,29 +1,45 @@
-import React, { /*useState,*/ useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import logo from "../img/Logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-const { faker } = require("@faker-js/faker/locale/pt_BR");
-
+import { logout, getUser } from "../api/gameService";
 
 function Conta() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+
+  const handleGetUser = async () => {
+    const user = await getUser();
+    return user;
+  }
 
   useEffect(() => {
     document.title = "HANGMO - Conta";
+    const fetchUserData = async () => {
+      try {
+        const user = await getUser();
+        setEmail(user.email);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserData();
   }, []);
+
+  const handleInputChange = (e) => {
+    setEmail(e.target.value);
+  };
 
   const handleLogout = () => {
     // Store a mock authentication token in localStorage
-    localStorage.setItem("authToken", false);
-    // Set authToken globally
-    window.authToken = false;
-    global.authToken = false;
-    navigate("/hangmo");
-    console.log("Logged out, auth token:", localStorage.getItem("authToken"));
+    logout();
+    navigate("/Login");
   };
 
-  const phoneNumber = faker.number.int({ min: 10000000000, max: 99999999999 })
-    .toString();
+  const handleButtonClick = () => {
+    navigate('/mudar-senha');
+  };
 
   return (
     <div className="App">
@@ -42,31 +58,20 @@ function Conta() {
             }}
           >
             <h2>Informações da Conta</h2>
-            <label>Nome de usuário: </label>
-            <input
-              className="infom"
-              type="text"
-              placeholder={faker.internet.userName()}
-            />
             <label>Email: </label>
             <input
               className="infom"
               type="email"
-              placeholder={faker.internet.email()}
+              value={email}
+              onChange={handleInputChange}
+              disabled
             />
-            <label>Celular: </label>
-            <input className="infom" type="tel" placeholder={phoneNumber} />
-            <label>Aniversário: </label>
-            <input className="infom" type="date" />
-            <label>Cor favorita: </label>
-            <input className="infom" type="color" />
-            <Link to="/mudar-senha">Mudar senha</Link>
-            <div>
-              <button type="submit" style={{ marginRight: "20px" }}>
-                Salvar
+            <div style={{ marginTop: "20px" }}>
+              <button type="button" style={{ marginRight: "20px" }} onClick={handleButtonClick}>
+                Mudar senha
               </button>
               <button type="button" onClick={handleLogout}>
-                Deslogar
+                Logout
               </button>
             </div>
           </div>

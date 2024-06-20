@@ -39,6 +39,7 @@ export const register = async(email, password) =>{
   }
 
 }
+
 export const logout = async() =>{
   try{
     const response = await apiClient.post('/logout');
@@ -47,6 +48,12 @@ export const logout = async() =>{
   }
 }
 
-
-
-
+export const getUser = async () => {
+  try {
+    const response = await apiClient.get('/Account/GetUser', {withCredentials : true});
+    return response.data;
+  } catch (error) {
+    console.error('Error get user:', error);
+    throw error;
+  }
+};

@@ -37,11 +37,12 @@ function HangmanGame() {
     { usuario: "Usuário 9", pontuacao: 50 },
     { usuario: "Usuário 10", pontuacao: 45 },
     ];
-  
 
   const handleCreateGame = async () => {
     if (theme) {
       try {
+        setDisplayWord("");
+        setGameOver(false);
         const gameData = await createGame(theme);
         setGame(gameData);
         setGameId(gameData.gameId);
