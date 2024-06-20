@@ -1,0 +1,46 @@
+var programming_languages = [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C",
+    "Ruby",
+    "Swift",
+    "Kotlin",
+    "PHP",
+    "Go",
+    "Rust",
+    "TypeScript",
+    "Scala",
+    "Perl",
+    "Lua",
+    "Haskell",
+    "R",
+    "Matlab",
+    "Objective-C",
+    "VHDL",
+    "Verilog",
+    "SQL",
+    "Assembly",
+    "HTML",
+    "CSS",
+    "XML",
+    "JSON",
+    "YAML",
+    "Markdown",
+    "LaTeX",
+    "Fortram",
+    "COBOL",
+    "Ada",
+    "Lisp",
+    "Scheme",
+    "Prolog",
+    "Smalltalk",
+    "Forth",
+    "Erlang",
+];
+
+function randomWord() {
+    return programming_languages[Math.floor(Math.random() * programming_languages.length)];
+}
+
+export { randomWord };

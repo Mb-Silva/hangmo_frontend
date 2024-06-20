@@ -1,0 +1,450 @@
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  
+  
+  color: black;
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding-top: 20px;
+  color: #ff6b00;
+}
+
+.App {
+  text-align: center;
+  background-color: #ffffff;
+}
+
+
+.container {
+  
+  width: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  width: 40rem;
+  background-color: #ebebebeb;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 0;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+  border-bottom: 1rem;
+}
+
+.login {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.logo {
+  width: 15rem; /* tamanho do logo */
+  height: auto; /* Isso mantém a proporção da imagem */
+}
+
+.logo:hover {
+  transform: scale(0.99);
+  transition: transform 0.1s ease;
+}
+
+
+#containerCadastro {
+  height: 37rem;
+}
+
+#loginpage {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  width: 40rem; /* Define a largura para quase a totalidade do container */
+}
+
+#loginpage h2 {
+  color: #ff6b00;
+  font-size: 2rem;
+  margin-top: 0.1rem;
+}
+
+#loginpage input {
+  width: 40rem;
+  margin-bottom: 1rem;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  border: none;
+  height: 2.5rem;
+  padding: 10px; /* Adiciona um espaçamento interno */
+  color: #fb852f;
+}
+
+#forgetPassAndCreate {
+  margin-top: 1rem;
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  clear: both; /* Adicione esta linha */
+}
+
+#forgetPassAndCreate a {
+  color: #1e1e1e;
+  text-decoration: underline;
+}
+
+#forgetPassAndCreate a:hover {
+  color: #fb852f;
+  /* transform: scale(1.05);
+  transition: transform 0.1s ease; */
+  text-decoration: none;
+}
+
+#socialLogoImg {
+  width: 10rem;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.sociallogo {
+  margin-top: 1.2rem;
+  width: 3rem;
+  height: auto;
+}
+
+.sociallogo:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease;
+}
+
+
+.hangman-game {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+  z-index: 1;
+  
+   /* This will make the div take up the full height of the viewport */
+  
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 100%;
+}
+
+#tema {
+  font-size: 1.5rem;
+  color: #ff6b00;
+  display: flex;  
+  justify-content: center;
+}
+
+.sidebar {
+  width: 15rem;
+  padding-top: 5rem;
+  padding-right: 1rem;
+}
+
+.game{ 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+button {
+  margin-top: 1rem;
+  --bg: #ff6b00;
+  --text-color: #fff;
+  position: relative;
+  width: 150px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow:
+    #bd5003 0px 7px 2px,
+    #000 0px 8px 5px;
+}
+/* */
+
+/* */
+
+#alphabet {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: max-content;
+  padding: 1rem;
+}
+
+#alphabet-container {
+  display: flex;
+  justify-content: center;
+}
+
+.alphabet-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.letter {
+  width: 2rem;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #ff6b00;
+  outline: 0;
+}
+
+.letter:hover {
+  background-color: #e7660a;
+  opacity: 1;
+}
+
+.letter:active {
+  top: 4px;
+  box-shadow:
+    #c0392b 0px 3px 2px,
+    #000 0px 3px 5px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  top: 4px;
+  box-shadow:
+    #c0392b 0px 3px 2px,
+    #000 0px 3px 5px;
+}
+
+#successMessage {
+  margin-top: 2rem;
+  padding: 10px;
+  border: 2px solid #d9d9d9;
+  background-color: #fb852f;
+  border-radius: 1rem;
+  color: white;
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #d9d9d9;
+  margin: 5rem 0 0 0;
+  padding: 1rem;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Estilo para a tabela */
+.table-container {
+  /*overflow-x: auto;  Adiciona uma barra de rolagem horizontal caso o conteúdo seja muito largo */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 15rem;
+  padding-top: 1rem;
+
+  
+}
+
+
+.leaderboard {
+  width: 100%;
+  border: 1px solid #ddd;/* Adiciona bordas às células */
+  border-radius: 3px;
+  border-collapse: separate; /* Usa bordas separadas para células */
+  border-spacing: 0;  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  
+}
+
+.leaderboard th,
+.leaderboard td {
+  
+  padding: 7px; /* Adiciona espaçamento interno */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.leaderboard th {
+  background-color: #f2f2f2; /* Cor de fundo para as células do cabeçalho */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilo para as linhas pares */
+.leaderboard tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+  
+}
+
+/* Estilo para as linhas ímpares */
+.leaderboard tr:nth-child(odd) {
+  background-color: #ffffff; /* Cor de fundo para linhas ímpares */
+}
+
+/* Estilo para células selecionadas */
+.leaderboard td.selected {
+  background-color: #fb852f; /* Cor de fundo para células selecionadas */
+  color: #ffffff; /* Cor do texto para células selecionadas */
+}
+
+/* Estilo para células hover */
+.leaderboard td:hover {
+  background-color: #f5f5f5; /* Cor de fundo ao passar o mouse */
+  cursor: pointer; /* Altera o cursor ao passar o mouse */
+}
+
+/* Estilo para o cabeçalho da tabela */
+.leaderboard th {
+  position: -webkit-sticky; /* Para Safari */
+  position: sticky; /* Padrão */
+  top: 0; /* Posiciona o cabeçalho no topo */
+  z-index: 1; /* Garante que o cabeçalho esteja acima do conteúdo da tabela */
+  background-color: #f2f2f2; /* Cor de fundo para o cabeçalho */
+}
+
+/* Estilo para células do cabeçalho */
+.leaderboard th,
+.leaderboard td {
+  min-width: 100px; /* Largura mínima para as células */
+  max-width: 200px; /* Largura máxima para as células */
+}
+
+/* Estilo para células com texto longo */
+.leaderboard td {
+  white-space: nowrap; /* Impede que o texto longo seja quebrado */
+  overflow: hidden; /* Oculta o texto que transborda */
+  text-overflow: ellipsis; /* Adiciona reticências ao final do texto que não cabe na célula */
+}
+
+.score-table-container {
+  
+  gap: 10px;
+  width: 15rem;
+  padding-top: 1rem;
+
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.score-table td {
+  padding: 8px;
+  
+  text-align: left;
+}
+
+.score-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.score-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.score-table th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.infom {
+  width:100%;
+}
+
+h5 {
+  padding-top: 1rem;
+}
+
+#multiplayerCode {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+#Enviar {
+  margin-top: 10rem;
+}
+
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .table-container {
+    display: none;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    align-items: flex-end;
+  }
+  .menu li {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .game-container {
+    padding-left: 7rem;
+  }
+  footer {
+    display: none;
+  }
+}

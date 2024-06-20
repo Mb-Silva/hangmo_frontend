@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "start",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^(.*):\\s+(.*):(\\d+):(\\d+)$",
+                    "file": 1,
+                    "message": 2,
+                    "line": 3,
+                    "column": 4
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Compiling...",
+                    "endsPattern": "Compiled successfully."
+                }
+            },
+            "label": "npm start"
+        }
+    ]
+}
