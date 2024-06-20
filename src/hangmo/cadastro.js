@@ -137,7 +137,7 @@ function Cadastro() {
             <div>
               <input
                 className="login"
-                type="text"
+                type="password"
                 placeholder="Digite sua senha..."
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -151,7 +151,7 @@ function Cadastro() {
             <div>
               <input
                 className="login"
-                type="text"
+                type="password"
                 placeholder="Confirme sua senha..."
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}

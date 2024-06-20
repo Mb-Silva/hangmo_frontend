@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import { logout } from "../../api/gameService";
 export function NavBar({
   logo
 }) {
@@ -18,7 +19,7 @@ export function NavBar({
     </div>
     <div className="navbar-right">
 
-      <Link to="/Conta" className="navbar-button">Logout</Link>
+      <Link to="/Login" className="navbar-button" onClick={logout}>Logout</Link>
       
 
     </div>

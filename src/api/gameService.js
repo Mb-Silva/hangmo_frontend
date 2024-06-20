@@ -39,5 +39,14 @@ export const register = async(email, password) =>{
   }
 
 }
+export const logout = async() =>{
+  try{
+    const response = await apiClient.post('/logout');
+  }catch (error){
+    throw error
+  }
+}
+
+
 
 
